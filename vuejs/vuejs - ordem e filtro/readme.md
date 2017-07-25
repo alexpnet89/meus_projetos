@@ -1,0 +1,1 @@
+Nesse projeto, fiz uma simples tabela onde é possível filtrar e ordenar usando somente vueJS com um pouco de CSS.
