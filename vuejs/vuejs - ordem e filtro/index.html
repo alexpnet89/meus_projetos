@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
+</head>
+<body>
+
+	<div id="app">
+		<h3>
+			Procurar Título: <input v-model="filterText" />
+		</h3>
+		<h3>
+			Ordenar títulos por:
+			<button @click="ordenarMenor">Menor Nota</button>
+			<button @click="ordenarMaior">Maior Nota</button>
+		</h3>
+
+		<table>
+			<thead>
+				<tr>
+					<th v-for="coluna in colunas">
+						{{ coluna }}
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="nota in filmesFiltrados">
+					<td v-for="coluna in colunas">
+						{{ nota[coluna] }}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
